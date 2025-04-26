@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products page</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div>
+        <h3 class="pageName">6 items</h3>
+      </div>
+
+      <div class="sort-container">
+        <label for="sort-options" class="sort-label">Sort by</label>
+        <select id="sort-options" class="sort-select">
+          <option value="recommended">Recommended</option>
+          <option value="price-low-high">Price: Low to high</option>
+          <option value="price-high-low">Price: High to low</option>
+          <option value="newest">Newest</option>
+        </select>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="section">
+        <div class="categories">
+          <ul id="category-list"></ul>
+        </div>
+
+        <div class="products" id="product-list"></div>
+      </section>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
+</html>
