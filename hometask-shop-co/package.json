@@ -1,0 +1,27 @@
+{
+  "name": "shop.co",
+  "version": "1.0.0",
+  "description": "shop.co E-Commerce project",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "type-check": "tsc --noEmit"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "Viktoria Bortnikova",
+
+  "homepage": "",
+  "dependencies": {
+    "yourrouter": "^2.0.5"
+  },
+  "devDependencies": {
+    "vite": "^5.1.4",
+    "typescript": "^5.0.0",
+    "@types/node": "^20.0.0"
+  }
+}

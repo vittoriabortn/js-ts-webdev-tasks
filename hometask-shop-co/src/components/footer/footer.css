@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+.footer {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  padding: 0 20px;
+}
+
+.footer__content {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  padding: 40px 0;
+}
+
+.footer__links {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.footer__links ul {
+  margin: 0;
+  padding: 0;
+}
+
+.email__links ul {
+  margin: 0;
+  padding: 0;
+}
+
+.footer > .logo {
+  color: var(--color-white);
+}
+
+.footer__wrapper {
+  margin: 0 auto;
+  padding: 40px 0 24px;
+}
+
+.footer__icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  max-width: 390px;
+}
+
+.footer__icon {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.footer__logo__wrap {
+  width: 225px;
+  color: rgba(255, 255, 255, 1);
+  font-weight: 500;
+}
+
+.footer__logo {
+  font-size: 1.75rem;
+  line-height: 2.625rem;
+  font-weight: 600;
+}
+
+.footer__logo span {
+  font-weight: 500;
+  color: rgba(245, 163, 183, 1);
+}
+
+.logo__discription {
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.125rem;
+}
+
+.logo__phone a,
+.logo__email a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 1);
+}
+
+.footer__line {
+  width: 100vw;
+  background-color: var(--color-lilac);
+  height: 1px;
+}
+
+.footer__data {
+  color: var(--color-lilac);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer__first {
+  display: flex;
+}
+
+.footer__first p:first-child {
+  margin-right: 20px;
+}
+
+.footer__links .list__title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: var(--color-lilac);
+}
+
+.footer__links ul li {
+  margin-bottom: 12px;
+}
+
+@media screen and (min-width: 768px) {
+  .footer__data {
+    flex-direction: column;
+  }
+
+  .footer__content {
+    flex-direction: row;
+  }
+
+  .footer__links {
+    flex-direction: row;
+  }
+
+  .footer__icons {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}

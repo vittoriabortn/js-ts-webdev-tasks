@@ -1,0 +1,103 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  min-height: 376px;
+
+  background-color: var(--color-blue-gray);
+  background-image: url('../../assets/images/hero-mobile.jpg');
+  background-size: contain;
+  background-position: right;
+  background-repeat: no-repeat;
+
+  padding: 32px 96px 78px 32px;
+}
+
+.hero__title {
+  font-weight: 540;
+  font-size: 64px;
+  line-height: 64px;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+}
+
+.hero__description {
+  font-weight: 350;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0%;
+}
+
+.hero__cta {
+  font-family: 'Poppins';
+  border-radius: 62px;
+  color: var(--color-white);
+  background-color: var(--color-black);
+
+  padding: 18px 72px;
+
+  font-size: 16px;
+  font-weight: 420;
+  line-height: 1.375rem;
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  gap: 40px;
+}
+
+.stat-value {
+  font-size: 24px;
+  font-weight: 700;
+  color: #000;
+}
+
+.stat-label {
+  font-size: 14px;
+  color: #555;
+  margin-top: 4px;
+}
+
+.divider {
+  width: 1px;
+  height: 40px;
+  background-color: #ccc;
+}
+
+.brand-strip {
+  width: 100%;
+  background-color: #000;
+}
+
+.brand-strip-inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 60px;
+  padding: 40px 20px;
+  flex-wrap: wrap;
+}
+
+.brand-strip img {
+  height: 40px;
+  /* Стили ниже — применимы только если SVG иконки черные и требуют перекраски в белый */
+  filter: brightness(0) invert(1);
+  transition: transform 0.2s ease;
+}
+
+.brand-strip img:hover {
+  transform: scale(1.05);
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    background-image: url('../../assets/images/hero-desktop.jpg');
+  }
+}

@@ -1,0 +1,135 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  padding: 16px 20px;
+}
+
+.header > .logo {
+  color: var(--color-black);
+}
+
+.header #menu {
+  position: fixed;
+  left: 20px;
+  top: 15px;
+  color: #383838;
+  transition: 0.3s ease-in-out;
+  z-index: 2;
+}
+.header.opened #menu {
+  transform: translateX(calc(100vw - 20px - 63px));
+}
+.header.opened #menu .burger-menu span {
+  background: #ffffff;
+}
+.header.opened #menu .icon-title {
+  display: none;
+}
+
+.burger-menu {
+  width: 24px;
+  height: 24px;
+  position: relative;
+}
+
+.burger-menu span {
+  display: block;
+  position: absolute;
+  width: 18px;
+  height: 2px;
+  border-radius: 2px;
+  background: #383838;
+  box-sizing: border-box;
+  left: 3px;
+  transition: 0.5s ease-in-out;
+}
+
+.burger-menu span:nth-child(1) {
+  top: 5px;
+}
+
+.burger-menu span:nth-child(2) {
+  top: 11px;
+}
+
+.burger-menu span:nth-child(3) {
+  top: 17px;
+}
+
+a {
+  text-decoration: none;
+  color: #383838;
+}
+
+.header.opened .burger-menu span:nth-child(1) {
+  transform: rotate(-45deg) translate(-7px, 7px);
+}
+
+.header.opened .burger-menu span:nth-child(2) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+.header.opened .burger-menu span:nth-child(3) {
+  transform: rotate(45deg) translate(-2px, -1px);
+}
+
+.header .icon-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+}
+.header .icon {
+  display: flex;
+  justify-content: center;
+}
+ul li {
+  list-style: none;
+  margin: 0;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+}
+nav ul li {
+  padding: 0 20px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.mobile-hidden {
+  display: none !important;
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    justify-content: space-between;
+    margin: 0 calc(50vw - 575px);
+  }
+
+  .desktop-hidden {
+    display: none !important;
+  }
+
+  .action-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 30px;
+    width: 180px;
+  }
+  .action-bar .icon-container {
+    margin: 0 10px;
+  }
+
+  .mobile-hidden {
+    display: flex !important;
+  }
+}

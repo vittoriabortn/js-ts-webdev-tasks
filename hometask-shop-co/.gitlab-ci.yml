@@ -1,0 +1,25 @@
+
+image: node:16.19.0
+workflow:
+  rules:
+    - if: $CI_COMMIT_BRANCH
+before_script:
+  - npm install
+pages:
+  stage: deploy
+  cache:
+    key:
+      files:
+        - package-lock.json
+      prefix: npm
+    paths:
+      - node_modules/
+  script:
+    - npm run build -- --base="/bloom-beauty/"
+    - cp -a dist/. public/
+  artifacts:
+    paths:
+      - public
+  rules:
+    - if: $CI_COMMIT_BRANCH == "main"
+  environment: production

@@ -1,0 +1,43 @@
+.blog_showmore{
+    cursor: pointer;
+}
+
+.paginator {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 80px;
+
+}
+
+.paginator_pages {
+    display: flex;
+}
+
+.pagination__icon {
+    background-image: url('/src/assets/icons/circle\ arrows.svg');
+    background-position: center;
+    background-size: contain;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.left_icon {
+    transform: rotate(180deg);
+}
+
+.pages_list {
+    display: flex;
+    gap: 16px;
+    margin-left: 20px;
+    margin-right: 20px;
+
+}
+
+.pages_list>span {
+    cursor: pointer;
+}
