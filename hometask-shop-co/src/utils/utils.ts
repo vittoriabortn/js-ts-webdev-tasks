@@ -16,4 +16,10 @@ export function getBlossomedImageUrl(img: string): string {
 
 export function getCardImageUrl(img: string): string {
   return new URL(`/src/assets/images/cards/${img}`, import.meta.url).href;
-} 
+}
+
+export function getIconBrandUrl(icon: string): string {
+  return new URL(`/src/assets/icons/brands/${icon}`, import.meta.url).href;
+}
+
+

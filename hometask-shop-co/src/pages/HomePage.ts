@@ -3,6 +3,7 @@ import { getProducts } from '../api/products';
 import { Layout } from '../layout/Layout';
 import { Cards } from '../components/cards/cards';
 import { ProductCardLarge } from '@/components/product-card-large/product-card-large';
+import { CategoryGrid } from '@/components/category-grid/category-grid.ts';
 
 export const HomePage = async () => {
   const products = await getProducts({ skip: 0, limit: 2 });
@@ -21,8 +22,10 @@ export const HomePage = async () => {
 
   return Layout(`
     ${Hero()}
+    ${CategoryGrid()}
     ${Cards('New Arrivals', newArrivals)}
     ${Cards('Best Sellers', bestSellers)}
+
     ${products.map((el, index) => ProductCardLarge(el, index)).join('')}
   `);
 };

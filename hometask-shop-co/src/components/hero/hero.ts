@@ -1,41 +1,59 @@
+import { getIconBrandUrl } from '@/utils/utils';
+import { brands } from './constants';
+
 import './hero.css';
 
 export const Hero = () => {
   return `
     <section class="hero">
-      <h1 class="hero__title">
-        FIND ANYTHING <br /> THAT MATCHES <br /> YOUR STYLE <br />
-      </h1>
+      <div class="hero__container">
+       
+      <div class="hero__content">
+          
 
-      <p class="hero__description">Browse through our diverse range of meticulously crafted garments, <br /> designed to bring out your individuality and cater to your sense of style.</p>
+<h1 class="hero__title">
+  FIND <span class="underline">ANYTHING</span> <br/> THAT MATCHES <br/> YOUR STYLE
+</h1>
+          <p class="hero__description">
+            Browse through our diverse range of meticulously crafted garments, <br/>
+            designed to bring out your individuality and cater to your sense of style.
+          </p>
 
-      <a class="hero__cta" href="#/catalog">Shop Now</a>
+          <a class="hero__cta" href="#/catalog">Shop Now</a>
 
-    <div class="stats">
-  <div class="stat-item">
-    <div class="stat-value">200+</div>
-    <div class="stat-label">International Brands</div>
-  </div>
-  <div class="divider"></div>
-  <div class="stat-item">
-    <div class="stat-value">2,000+</div>
-    <div class="stat-label">High-Quality Products</div>
-  </div>
-  <div class="divider"></div>
-  <div class="stat-item">
-    <div class="stat-value">30,000+</div>
-    <div class="stat-label">Happy Customers</div>
+<div class="stats-wrapper">
+  <div class="stats">
+    <div class="stat">
+      <div class="stat-value">200+</div>
+      <div class="stat-label">International Brands</div>
+    </div>
+    <div class="divider"></div>
+    <div class="stat">
+      <div class="stat-value">2,000+</div>
+      <div class="stat-label">High-Quality Products</div>
+    </div>
+    <div class="divider"></div>
+    <div class="stat">
+      <div class="stat-value">30,000+</div>
+      <div class="stat-label">Happy Customers</div>
+    </div>
   </div>
 </div>
+          
+        </div>
+        <div class="hero_desktop"></div>
+      </div>
 
-  <div class="brand-strip-inner">
-    <img src="/public/assets/icons/brands/versace.svg" alt="Versace" />
-    <img src="/assets/brands/zara.svg" alt="Zara" />
-    <img src="/assets/brands/gucci.svg" alt="Gucci" />
-    <img src="/assets/brands/prada.svg" alt="Prada" />
-    <img src="/assets/brands/calvin-klein.svg" alt="Calvin Klein" />
-  </div>
-</section>
-    
-    `;
+      <ul class="brand-strip-inner">
+        ${brands
+          .map(
+            (brand) =>
+              `<li><img src="${getIconBrandUrl(brand.name)}" alt="${
+                brand.alt
+              }" /></li>`
+          )
+          .join('')}
+      </ul>
+    </section>
+  `;
 };

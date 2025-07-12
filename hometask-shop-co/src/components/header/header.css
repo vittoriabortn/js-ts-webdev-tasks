@@ -1,10 +1,49 @@
+.promo-banner {
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.promo-banner p {
+  margin: 0;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.promo-banner .highlighted {
+  font-weight: 500;
+  text-decoration: underline;
+  color: #fff;
+}
+
+.promo-banner .close-btn {
+  position: absolute;
+  right: 20px;
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  color: #fff;
+  cursor: pointer;
+}
+
 .header {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-family: 'Poppins', sans-serif;
-  padding: 16px 20px;
+  padding: 20px 40px;
+  box-sizing: border-box;
 }
+
 
 .header > .logo {
   color: var(--color-black);
@@ -18,12 +57,15 @@
   transition: 0.3s ease-in-out;
   z-index: 2;
 }
+
 .header.opened #menu {
   transform: translateX(calc(100vw - 20px - 63px));
 }
+
 .header.opened #menu .burger-menu span {
   background: #ffffff;
 }
+
 .header.opened #menu .icon-title {
   display: none;
 }
@@ -84,10 +126,12 @@ a {
   width: 24px;
   height: 24px;
 }
+
 .header .icon {
   display: flex;
   justify-content: center;
 }
+
 ul li {
   list-style: none;
   margin: 0;
@@ -97,6 +141,7 @@ nav ul {
   display: flex;
   align-items: center;
 }
+
 nav ul li {
   padding: 0 20px;
   font-weight: 400;
@@ -108,12 +153,10 @@ nav ul li {
   display: none !important;
 }
 
-@media screen and (min-width: 768px) {
-  .header {
-    justify-content: space-between;
-    margin: 0 calc(50vw - 575px);
-  }
+/* ✅ УБРАНО ограничение ширины: */
+/* margin: 0 calc(50vw - 575px); */
 
+@media screen and (min-width: 768px) {
   .desktop-hidden {
     display: none !important;
   }
@@ -125,6 +168,7 @@ nav ul li {
     height: 30px;
     width: 180px;
   }
+
   .action-bar .icon-container {
     margin: 0 10px;
   }
