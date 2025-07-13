@@ -22,10 +22,9 @@ export const HomePage = async () => {
 
   return Layout(`
     ${Hero()}
-    ${CategoryGrid()}
+    ${await CategoryGrid()}
     ${Cards('New Arrivals', newArrivals)}
     ${Cards('Best Sellers', bestSellers)}
-
     ${products.map((el, index) => ProductCardLarge(el, index)).join('')}
   `);
 };

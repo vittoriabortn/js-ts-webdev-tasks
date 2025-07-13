@@ -1,95 +1,95 @@
 import './footer.css';
-import { getIconUrl } from '../../utils/utils.ts';
+import { getIconUrl } from '../../utils/utils';
+import { SubscribeForm } from "./subscribeForm";
 
-const facebookIconUrl: string = getIconUrl('facebook.svg');
-const instagramIconUrl: string = getIconUrl('instagram.svg');
-const pinterestIconUrl: string = getIconUrl('pinterest.svg');
-const telegramIconUrl: string = getIconUrl('telegram.svg');
-const twitterIconUrl: string = getIconUrl('twitter.svg');
+import visa from '../../assets/icons/visa.svg';
+import mastercard from '../../assets/icons/mastercard.svg';
+import paypal from '../../assets/icons/paypal.svg';
+import applepay from '../../assets/icons/applepay.svg';
+import googlepay from '../../assets/icons/googlepay.svg';
+
+
+const facebookIconUrl = getIconUrl('facebook.svg');
+const instagramIconUrl = getIconUrl('instagram.svg');
+const pinterestIconUrl = getIconUrl('pinterest.svg');
+const telegramIconUrl = getIconUrl('telegram.svg');
+const twitterIconUrl = getIconUrl('twitter.svg');
 
 export const Footer = (): HTMLElement => {
-  const footer: HTMLElement = document.createElement('footer');
-  footer.classList.add('footer');
+  const footer = document.createElement('footer');
+  footer.className = 'footer';
+
+  const subscribeForm = SubscribeForm();
 
   footer.innerHTML = `
-    <div class="footer__wrapper">
-      <div class="footer__icons">
-        <img class="footer__icon" src="${facebookIconUrl}" alt="Facebook" />
-        <img class="footer__icon" src="${instagramIconUrl}" alt="Instagram" />
-        <img class="footer__icon" src="${pinterestIconUrl}" alt="Pinterest" />
-        <img class="footer__icon" src="${telegramIconUrl}" alt="Telegram" />
-        <img class="footer__icon" src="${twitterIconUrl}" alt="Twitter" />
+    <div class="footer__top"></div>
+    <div class="footer__main">
+      <div class="footer__brand">
+        <div class="footer__logo">SHOP.CO</div>
+        <p class="footer__description">
+          We have clothes that suits your style and which you’re proud to wear. From women to men.
+        </p>
+        <div class="footer__socials">
+          <img src="${twitterIconUrl}" alt="Twitter" />
+          <img src="${facebookIconUrl}" alt="Facebook" />
+          <img src="${instagramIconUrl}" alt="Instagram" />
+          <img src="${pinterestIconUrl}" alt="Pinterest" />
+          <img src="${telegramIconUrl}" alt="Telegram" />
+        </div>
       </div>
-
-      <div class="footer__content">
-        <div class="footer__logo__wrap">
-          <div class="footer__logo">SHOP.CO</div>
-        </div>
-
-        <div class="footer__links">
-          <div class="help__links">
-            <ul>
-              <li class="list__title">Company</li>
-              <li>About</li>
-              <li>Features</li>
-              <li>Works</li>
-              <li>Career</li>
-            </ul>
-          </div>
-          <div class="account__links">
-            <ul>
-              <li class="list__title">Help</li>
-              <li>Customer Support</li>
-              <li>Delivery Details</li>
-              <li>Terms & Conditions</li>
-              <li>Privacy Policy</li>
-            </ul>
-          </div>
-          <div class="customer__links">
-            <ul>
-              <li class="list__title">FAQ</li>
-              <li>Account</li>
-              <li>Manage Deliveries</li>
-              <li>Orders</li>
-              <li>Payments</li>
-            </ul>
-          </div>
-          <div class="resources__links">
-            <ul>
-              <li class="list__title">Resources</li>
-              <li>Free eBooks</li>
-              <li>Development Tutorial</li>
-              <li>How to - Blog</li>
-              <li>Youtube Playlist</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="email__links">
+      <div class="footer__links">
+        <div class="footer__column">
+          <div class="footer__heading">COMPANY</div>
           <ul>
-            <li class="email__list__title">STAY UPTO DATE ABOUT OUR LATEST OFFERS</li>
-            <li>
-              <form>
-                <input type="email" placeholder="Enter your email address" required />
-                <button class="subscribe__button" type="submit">
-                  Subscribe to Newsletter
-                </button>
-              </form>
-            </li>
+            <li>About</li>
+            <li>Features</li>
+            <li>Works</li>
+            <li>Career</li>
+          </ul>
+        </div>
+        <div class="footer__column">
+          <div class="footer__heading">HELP</div>
+          <ul>
+            <li>Customer Support</li>
+            <li>Delivery Details</li>
+            <li>Terms & Conditions</li>
+            <li>Privacy Policy</li>
+          </ul>
+        </div>
+        <div class="footer__column">
+          <div class="footer__heading">FAQ</div>
+          <ul>
+            <li>Account</li>
+            <li>Manage Deliveries</li>
+            <li>Orders</li>
+            <li>Payments</li>
+          </ul>
+        </div>
+        <div class="footer__column">
+          <div class="footer__heading">RESOURSES</div>
+          <ul>
+            <li>Free eBooks</li>
+            <li>Development Tutorial</li>
+            <li>How to – Blog</li>
+            <li>Youtube Playlist</li>
           </ul>
         </div>
       </div>
+    </div>
+    <div class="footer__bottom">
+      <p>Shop.co © 2000–2023, All Rights Reserved</p>
+<div class="footer__payments">
+  <img src="${visa}" alt="Visa" />
+  <img src="${mastercard}" alt="MasterCard" />
+  <img src="${paypal}" alt="PayPal" />
+  <img src="${applepay}" alt="ApplePay" />
+  <img src="${googlepay}" alt="GooglePay" />
+</div>
 
-      <div class="footer__line"></div>
-      <div class="footer__data">
-        <p>© 2023 SHOP.CO</p>
-        <div class="footer__first">
-          <p>Privacy Policy</p>
-          <p>Terms and Conditions</p>
-        </div>
-      </div>
     </div>
   `;
+
+  footer.querySelector('.footer__top')?.appendChild(subscribeForm);
 
   return footer;
 };
