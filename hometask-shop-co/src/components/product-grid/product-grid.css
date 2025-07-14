@@ -15,3 +15,12 @@
     grid-template-columns: repeat(3, 1fr);
   }
 }
+.catalog {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.products {
+  flex-grow: 1;
+}
