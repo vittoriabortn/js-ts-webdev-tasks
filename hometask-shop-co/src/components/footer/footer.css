@@ -81,9 +81,6 @@
   margin-left: 10px;
 }
 
-/* ===============================
-   Mobile styles
-================================== */
 @media (max-width: 768px) {
   .footer__main {
     flex-direction: column;

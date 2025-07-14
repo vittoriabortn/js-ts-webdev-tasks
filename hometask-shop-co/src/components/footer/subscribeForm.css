@@ -50,14 +50,13 @@
   padding: 14px;
   font-weight: 600;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .subscribe__button:hover {
   background-color: #e5e5e5;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .subscribe {
     flex-direction: column;

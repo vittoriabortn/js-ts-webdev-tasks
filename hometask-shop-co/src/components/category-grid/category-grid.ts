@@ -1,5 +1,6 @@
 import { getCategories } from "@/api/categories";
 import { CategoryCard } from "./category-сard/category-card";
+import './category-grid.css';
 
 export type Category = {
     name: string;
@@ -8,7 +9,6 @@ export type Category = {
   
   export const CategoryGrid = async () => {
     const categories = await getCategories(12);
-    console.log(categories)
   
     return (`
       <div class="category-grid">

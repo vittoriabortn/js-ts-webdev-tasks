@@ -153,9 +153,6 @@ nav ul li {
   display: none !important;
 }
 
-/* ✅ УБРАНО ограничение ширины: */
-/* margin: 0 calc(50vw - 575px); */
-
 @media screen and (min-width: 768px) {
   .desktop-hidden {
     display: none !important;

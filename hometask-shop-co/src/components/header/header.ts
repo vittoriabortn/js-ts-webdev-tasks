@@ -4,7 +4,6 @@ import { getIconUrl } from '../../utils/utils';
 const CART_ICON_URL: string = getIconUrl('cart-icon.svg');
 const ACCOUNT_ICON_URL: string = getIconUrl('account-icon.svg');
 
-// 💡 Отдельно промо-баннер
 const BANNER_TEMPLATE: string = `
   <div class="promo-banner" id="promo-banner">
     <p>
@@ -15,7 +14,6 @@ const BANNER_TEMPLATE: string = `
   </div>
 `;
 
-// 💡 Шапка отдельно
 const TEMPLATE: string = `
   <a class="logo" href="#/">
     <span class="color--black">SHOP.CO</span>
@@ -69,7 +67,6 @@ export const Header = (): HTMLElement => {
   return container;
 };
 
-// 💡 Закрытие баннера
 document.addEventListener('DOMContentLoaded', () => {
   const closeBtn = document.getElementById('close-banner-btn');
   const banner = document.getElementById('promo-banner');
